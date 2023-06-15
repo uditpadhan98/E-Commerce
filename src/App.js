@@ -10,12 +10,13 @@ import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
 
   const theme={
     colors:{
-      heading:"#000",
+      heading:"rgb(24 24 29)",
       text:"rgba(29,29,29,0.8)",
       white:"#fff",
       black:"#212529",
@@ -52,6 +53,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </ThemeProvider>
   );
