@@ -8,15 +8,16 @@ import FormatPrice from "./Helpers/FormatPrice";
 const Cart = () => {
   const { cart, clearCart, total_price, shipping_fee } = useCartContext();
 
-  if(cart.length===0){
+  if (cart.length === 0) {
     return (
       <EmptyDiv>
         <h3>No Cart in Item</h3>
       </EmptyDiv>
-    )
+    );
   }
-  return <Wrapper>
-    <div className="container">
+  return (
+    <Wrapper>
+      <div className="container">
         <div className="cart_heading grid grid-five-column">
           <p>Item</p>
           <p className="cart-hide">Price</p>
@@ -66,7 +67,8 @@ const Cart = () => {
           </div>
         </div>
       </div>
-  </Wrapper>;
+    </Wrapper>
+  );
 };
 const EmptyDiv = styled.div`
   display: grid;

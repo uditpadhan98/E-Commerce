@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "./styles/Button";
@@ -22,8 +22,8 @@ const ErrorPage = () => {
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   .container {
@@ -44,4 +44,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default ErrorPage
+export default ErrorPage;

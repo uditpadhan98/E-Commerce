@@ -1,16 +1,16 @@
-import { createContext, useContext, useReducer,useEffect } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
 const getLocalCartData = () => {
-    let localCartData = localStorage.getItem("thapaCart");
-    if (localCartData === []) {
-      return [];
-    } else {
-      return JSON.parse(localCartData);
-    }
-  };
+  let localCartData = localStorage.getItem("thapaCart");
+  if (localCartData === []) {
+    return [];
+  } else {
+    return JSON.parse(localCartData);
+  }
+};
 
 const initialState = {
   cart: getLocalCartData(),
@@ -26,22 +26,22 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "ADD_TO_CART", payload: { id, color, amount, product } });
   };
 
-  const setDecrease=(id)=>{
-    dispatch({type:"SET_DECREMENT",payload:id});
+  const setDecrease = (id) => {
+    dispatch({ type: "SET_DECREMENT", payload: id });
   };
 
-  const setIncrease=(id)=>{
-    dispatch({type:"SET_INCREMENT",payload:id});
+  const setIncrease = (id) => {
+    dispatch({ type: "SET_INCREMENT", payload: id });
   };
 
   const removeItem = (id) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
 
-//   to clear cart
-const clearCart=()=>{
-    dispatch({type:"CLEAR_CART"});
-};
+  //   to clear cart
+  const clearCart = () => {
+    dispatch({ type: "CLEAR_CART" });
+  };
 
   // to add the data in localStorage
   // get vs set
@@ -52,7 +52,16 @@ const clearCart=()=>{
   }, [state.cart]);
 
   return (
-    <CartContext.Provider value={{ ...state, addToCart, removeItem,clearCart ,setDecrease,setIncrease}}>
+    <CartContext.Provider
+      value={{
+        ...state,
+        addToCart,
+        removeItem,
+        clearCart,
+        setDecrease,
+        setIncrease,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

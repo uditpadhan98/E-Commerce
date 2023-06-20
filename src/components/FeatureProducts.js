@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import { useProductContext } from "../context/ProductContext";
 import styled from "styled-components";
 import Product from "./Product";
 
 const FeatureProducts = () => {
-    const { isLoading, featureProducts } = useProductContext();
+  const { isLoading, featureProducts } = useProductContext();
 
-    if (isLoading) {
-        return <div> ......Loading </div>;
-      }
+  if (isLoading) {
+    return <div> ......Loading </div>;
+  }
 
   return (
     <Wrapper className="section">
@@ -22,7 +22,7 @@ const FeatureProducts = () => {
         </div>
       </div>
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.section`
@@ -125,4 +125,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default FeatureProducts
+export default FeatureProducts;

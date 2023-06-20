@@ -1,54 +1,54 @@
 const cartReducer = (state, action) => {
-    if (action.type === "ADD_TO_CART") {
-      let { id, color, amount, product } = action.payload;
-      // console.log(
-      //   "🚀 ~ file: cartReducer.js ~ line 4 ~ cartReducer ~ product",
-      //   product
-      // );
-  
-      let existingProduct = state.cart.find(
-        (curItem) => curItem.id === id + color
-      );
-  
-      if (existingProduct) {
-        let updatedProduct = state.cart.map((curElem) => {
-          if (curElem.id === id + color) {
-            let newAmount = curElem.amount + amount;
-  
-            if (newAmount >= curElem.max) {
-              newAmount = curElem.max;
-            }
-            return {
-              ...curElem,
-              amount: newAmount,
-            };
-          } else {
-            return curElem;
+  if (action.type === "ADD_TO_CART") {
+    let { id, color, amount, product } = action.payload;
+    // console.log(
+    //   "🚀 ~ file: cartReducer.js ~ line 4 ~ cartReducer ~ product",
+    //   product
+    // );
+
+    let existingProduct = state.cart.find(
+      (curItem) => curItem.id === id + color
+    );
+
+    if (existingProduct) {
+      let updatedProduct = state.cart.map((curElem) => {
+        if (curElem.id === id + color) {
+          let newAmount = curElem.amount + amount;
+
+          if (newAmount >= curElem.max) {
+            newAmount = curElem.max;
           }
-        });
-        return {
-          ...state,
-          cart: updatedProduct,
-        };
-      } else {
-        let cartProduct = {
-          id: id + color,
-          name: product.name,
-          color,
-          amount,
-          image: product.image[0].url,
-          price: product.price,
-          max: product.stock,
-        };
-  
-        return {
-          ...state,
-          cart: [...state.cart, cartProduct],
-        };
-      }
+          return {
+            ...curElem,
+            amount: newAmount,
+          };
+        } else {
+          return curElem;
+        }
+      });
+      return {
+        ...state,
+        cart: updatedProduct,
+      };
+    } else {
+      let cartProduct = {
+        id: id + color,
+        name: product.name,
+        color,
+        amount,
+        image: product.image[0].url,
+        price: product.price,
+        max: product.stock,
+      };
+
+      return {
+        ...state,
+        cart: [...state.cart, cartProduct],
+      };
     }
-  
-    // to set the increment and decrement
+  }
+
+  // to set the increment and decrement
   if (action.type === "SET_DECREMENT") {
     let updatedProduct = state.cart.map((curElem) => {
       if (curElem.id === action.payload) {
@@ -103,7 +103,7 @@ const cartReducer = (state, action) => {
     };
   }
 
-   if (action.type === "CART_TOTAL_PRICE") {
+  if (action.type === "CART_TOTAL_PRICE") {
     let total_price = state.cart.reduce((initialVal, curElem) => {
       let { price, amount } = curElem;
 
@@ -118,24 +118,24 @@ const cartReducer = (state, action) => {
     };
   }
 
-    if (action.type === "REMOVE_ITEM") {
-      let updatedCart = state.cart.filter(
-        (curItem) => curItem.id !== action.payload
-      );
-      return {
-        ...state,
-        cart: updatedCart,
-      };
-    }
-  
-    // to empty or to clear to cart
+  if (action.type === "REMOVE_ITEM") {
+    let updatedCart = state.cart.filter(
+      (curItem) => curItem.id !== action.payload
+    );
+    return {
+      ...state,
+      cart: updatedCart,
+    };
+  }
+
+  // to empty or to clear to cart
   if (action.type === "CLEAR_CART") {
     return {
       ...state,
       cart: [],
     };
   }
-    return state;
-  };
-  
-  export default cartReducer;
+  return state;
+};
+
+export default cartReducer;
