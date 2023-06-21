@@ -6,7 +6,7 @@ import FeatureProducts from "./components/FeatureProducts";
 
 const Home = () => {
   const data = {
-    name: "Udit store",
+    name: "Shopclue",
   };
 
   return (

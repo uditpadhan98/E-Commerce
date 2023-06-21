@@ -25,6 +25,9 @@ const MainHeader = styled.header`
   align-items: center;
   position: relative;
 
+  img{
+    width:130px;
+  }
   .logo {
     height: 5rem;
   }

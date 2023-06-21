@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { Button } from "../styles/Button";
-import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
+// import { NavLink } from "react-router-dom";
+// import { Button } from "../styles/Button";
+import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
       <Wrapper>
-        <section className="contact-short">
+        {/* <section className="contact-short">
           <div className="grid grid-two-column">
             <div>
               <h3>Ready to get started?</h3>
@@ -21,42 +21,54 @@ const Footer = () => {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* footer section */}
 
         <footer>
-          <div className="container grid grid-four-column">
+          <div className="container grid grid-three-column">
             <div className="footer-about">
-              <h3>Thapa Technical</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+              <h2>Shopclue</h2>
+              <p>
+                "ShopClues: Affordable online shopping with a vast selection and
+                unbeatable deals."
+              </p>
             </div>
-            <div className="footer-subscribe">
+            {/* <div className="footer-subscribe">
               <h3>Subscribe to get important updates</h3>
               <form action="#">
                 <input type="email" name="email" placeholder="YOUR E-MAIL" />
 
                 <input type="submit" value="subscribe" />
               </form>
-            </div>
+            </div> */}
             <div className="footer-social">
-              <h3>Follow Us</h3>
+              <h2>Follow Us</h2>
               <div className="footer-social--icons">
                 <div>
-                  <FaDiscord className="icons" />
+                  <a href="https://github.com/uditpadhan98">
+                    <FaGithub className="icons" />
+                  </a>
                 </div>
                 <div>
-                  <FaInstagram className="icons" />
+                  <a href="https://www.instagram.com/yo_u_dit/">
+                    <FaInstagram className="icons" />
+                  </a>
                 </div>
                 <div>
-                  <a href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA">
-                    <FaYoutube className="icons" />
+                  <a href="https://twitter.com/youdit98">
+                    <FaTwitter className="icons" />
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.linkedin.com/in/udit-padhan-41481a222/">
+                    <FaLinkedin className="icons" />
                   </a>
                 </div>
               </div>
             </div>
             <div className="footer-contact">
-              <h3>Call Us</h3>
-              <h3>+91 12345678978</h3>
+              <h2>Call Us</h2>
+              <p>+91 12345678978</p>
             </div>
           </div>
 
@@ -64,7 +76,8 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-column ">
               <p>
-                @{new Date().getFullYear()} Udit Technical. All Rights Reserved
+                @{new Date().getFullYear()} shopclue-Technical. All Rights
+                Reserved
               </p>
               <div>
                 <p>PRIVACY POLICY</p>
@@ -99,10 +112,12 @@ const Wrapper = styled.section`
   }
 
   footer {
-    padding: 14rem 0 9rem 0;
+    padding: 5rem 0 5rem 0;
     background-color: ${({ theme }) => theme.colors.footer_bg};
-    h3 {
-      color: ${({ theme }) => theme.colors.hr};
+    h2 {
+      color: rgb(84 243 145);
+      font-size: 25px;
+      font-weight: bold;
       margin-bottom: 2.4rem;
     }
     p {

@@ -59,6 +59,7 @@ const Wrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    color: ${({theme})=>theme.colors.helper}
     background: ${({ theme }) => theme.colors.bg};
     text-align: center;
     border-radius: 2rem;
@@ -102,7 +103,7 @@ const Wrapper = styled.section`
     padding: 2rem;
     border-radius: 50%;
     background-color: #fff;
-    color: #5138ee;
+    color: rgb(84 243 145);
   }
 `;
 export default Services;

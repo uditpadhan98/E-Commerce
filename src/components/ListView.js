@@ -22,7 +22,7 @@ const ListView = ({ products }) => {
                 </p>
                 <p>{description.slice(0, 90)}...</p>
 
-                <NavLink to={`/singleproduct/${id}`} className="btn-main">
+                <NavLink to={`/singleProduct/${id}`} className="btn-main">
                   <Button className="btn">Read More</Button>
                 </NavLink>
               </div>
@@ -60,8 +60,8 @@ const Wrapper = styled.section`
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      transition: all 0.2s linear;
+      /*background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.2s linear;*/
       cursor: pointer;
     }
     &:hover::after {

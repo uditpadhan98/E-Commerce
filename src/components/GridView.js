@@ -40,8 +40,8 @@ const Wrapper = styled.section`
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      transition: all 0.2s linear;
+      /*background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.2s linear;*/
       cursor: pointer;
     }
     &:hover::after {

@@ -22,7 +22,7 @@ const Cart = () => {
       <div className="container">
         {isAuthenticated && (
           <div className="cart-user--profile">
-            <img src={user.profile} alt={user.name} />
+            <img src="./images/user.png" alt={user.name} />
             <h2 className="cart-user--name">{user.name}</h2>
           </div>
         )}
@@ -123,13 +123,16 @@ const Wrapper = styled.section`
     margin-bottom: 5.4rem;
 
     img {
-      width: 8rem;
-      height: 8rem;
+      width: 6rem;
+      height: 6rem;
       border-radius: 50%;
     }
     h2 {
       font-size: 2.4rem;
     }
+  }
+  .user-profile-image{
+
   }
   .cart-user--name {
     text-transform: capitalize;

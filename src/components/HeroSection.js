@@ -12,11 +12,16 @@ const HeroSection = ({ myData }) => {
           <div className="hero-section-data">
             <p className="intro-data">Welcome to </p>
             <h1> {name} </h1>
-            <p>
-              Something will be written here later of total 3 lines.
+            <p className="company-details">
+              ShopClues is a popular online shopping site that offers a wide range of products at affordable prices.
+              With a vast selection of categories including electronics, fashion, home and kitchen, and more, it 
+              caters to diverse customer needs. ShopClues prides itself on providing quality products from trusted            
+              sellers, ensuring customer satisfaction. The site also offers regular discounts and deals, making it
+              a budget-friendly option for online shoppers. With convenient payment options and reliable delivery 
+              services, ShopClues aims to deliver a seamless shopping experience to its customers.
             </p>
             <NavLink>
-              <Button>show now</Button>
+              <Button>shop now</Button>
             </NavLink>
           </div>
           {/* our homepage image  */}
@@ -54,10 +59,14 @@ const Wrapper = styled.section`
     }
 
     .intro-data {
+      color:rgb(84 243 145);
       margin-bottom: 0;
     }
   }
 
+  .company-details{
+    text-align:justify;
+  }
   .hero-section-image {
     width: 100%;
     height: auto;
@@ -72,7 +81,7 @@ const Wrapper = styled.section`
       content: "";
       width: 60%;
       height: 80%;
-      background-color: rgba(81, 56, 238, 0.4);
+      background-color: rgba(84, 243, 145, 0.4);
       position: absolute;
       left: 50%;
       top: -5rem;

@@ -7,7 +7,7 @@ const FeatureProducts = () => {
   const { isLoading, featureProducts } = useProductContext();
 
   if (isLoading) {
-    return <div> ......Loading </div>;
+    return <div> Loading.... </div>;
   }
 
   return (
@@ -33,6 +33,11 @@ const Wrapper = styled.section`
     max-width: 120rem;
   }
 
+  .intro-data {
+    color:rgb(84 243 145);
+    font-size:2rem;
+  }
+
   figure {
     width: auto;
     display: flex;
@@ -48,8 +53,8 @@ const Wrapper = styled.section`
       left: 0;
       width: 0%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      transition: all 0.2s linear;
+      /*background-color: rgba(0, 0, 0, 0.5);
+      transition: all 0.2s linear;*/
       cursor: pointer;
     }
     &:hover::after {
