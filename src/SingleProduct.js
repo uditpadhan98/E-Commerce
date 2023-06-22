@@ -77,7 +77,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>shopclue Delivered </p>
               </div>
 
               <div className="product-warranty-data">
@@ -89,7 +89,7 @@ const SingleProduct = () => {
             <div className="product-data-info">
               <p>
                 Available:
-                <span> {stock > 0 ? "In Stock" : "Not Available"}</span>
+                <span className="stock-available"> {stock > 0 ? "In Stock" : "Not Available"}</span>
               </p>
               <p>
                 ID : <span> {id} </span>
@@ -148,7 +148,9 @@ const Wrapper = styled.section`
         }
       }
     }
-
+    .stock-available{
+      color:rgb(84 243 145);
+    }
     .product-data-price {
       font-weight: bold;
     }
