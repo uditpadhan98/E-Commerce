@@ -20,7 +20,7 @@ const HeroSection = ({ myData }) => {
               a budget-friendly option for online shoppers. With convenient payment options and reliable delivery 
               services, ShopClues aims to deliver a seamless shopping experience to its customers.
             </p>
-            <NavLink>
+            <NavLink to='/products'>
               <Button>shop now</Button>
             </NavLink>
           </div>

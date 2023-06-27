@@ -95,14 +95,14 @@ const Wrapper = styled.section`
     .btn {
       margin: 2rem 0;
       background-color: rgb(0 0 0 / 0%);
-      border: 0.1rem solid rgb(98 84 243);
+      border: 0.1rem solid rgb(84 243 145);
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgb(98 84 243);
+      color: rgb(84 243 145);
 
       &:hover {
-        background-color: rgb(98 84 243);
+        background-color: rgb(84 243 145);
       }
 
       &:hover a {
