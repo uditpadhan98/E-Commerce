@@ -1,28 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-// import { NavLink } from "react-router-dom";
-// import { Button } from "../styles/Button";
 import { FaInstagram, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
       <Wrapper>
-        {/* <section className="contact-short">
-          <div className="grid grid-two-column">
-            <div>
-              <h3>Ready to get started?</h3>
-              <h3>Talk to us today</h3>
-            </div>
-
-            <div>
-              <Button className="btn hireme-btn">
-                <NavLink to="/"> Get Started </NavLink>
-              </Button>
-            </div>
-          </div>
-        </section> */}
-        {/* footer section */}
 
         <footer>
           <div className="container grid grid-three-column">
@@ -123,6 +106,7 @@ const Wrapper = styled.section`
     p {
       color: ${({ theme }) => theme.colors.white};
     }
+
     .footer-social--icons {
       display: flex;
       gap: 2rem;

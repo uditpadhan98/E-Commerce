@@ -11,7 +11,8 @@ import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Star from "./components/Star";
 import AddToCart from "./components/AddToCart";
 
-const API = "https://api.pujakaitem.com/api/products";
+// const API = "https://api.pujakaitem.com/api/products";
+const API="https://ecommerce-api-dspr.onrender.com/products";
 
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
@@ -29,7 +30,7 @@ const SingleProduct = () => {
     stock,
     stars,
     reviews,
-    image,
+    images,
   } = singleProduct;
 
   useEffect(() => {
@@ -47,7 +48,7 @@ const SingleProduct = () => {
         <div className="grid grid-two-column">
           {/* product Images  */}
           <div className="product_images">
-            <MyImage imgs={image} />
+            <MyImage imgs={images} />
           </div>
 
           {/* product dAta  */}
@@ -191,6 +192,14 @@ const Wrapper = styled.section`
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     padding: 0 2.4rem;
+  }
+  @media (max-width: ${({ theme }) => theme.media.tab}) {
+    .product_images{
+      padding-left: 2rem;
+    }
+    .product-data{
+      padding-right: 2rem;
+    }
   }
 `;
 
